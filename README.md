@@ -5,6 +5,7 @@ Express + MongoDB API. This service uses Multer and Cloudinary for image/video u
 ## Deploy with Render
 
 1. Create a Render Blueprint from this repository and select `render.yaml`.
+	If creating a Web Service manually instead, set **Build Command** to `npm ci` and **Start Command** to `npm start` (the server entry point is `server.js`, not `index.js`).
 2. Set `MONGODB_URI` and the Cloudinary values in the Render service environment.
 3. Set `FRONTEND_URL` to the exact Vercel production origin (no trailing slash). Comma-separated origins can be used for approved preview domains.
 4. Deploy and confirm `https://<service>.onrender.com/api/health` returns JSON with `success: true`.
